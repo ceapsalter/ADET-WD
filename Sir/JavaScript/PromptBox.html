@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script type="text/javascript">
+
+            function promptBox(){
+             var message = prompt("Please enter your name"," User");
+                if(message == null || message==""){
+                    window.alert("User cancelled the prompt");
+                   } else {
+                    window.alert("Hello" + message +"! Gobas!");
+                   }
+            }
+
+        </script>
+    </head>
+    <body>
+
+        <input type="button" value="Click Me" onclick="promptBox()"/>
+    </body>
+</html>
