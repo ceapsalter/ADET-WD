@@ -1,9 +1,11 @@
 body {
-    color: #606468;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     font-family: Century Gothic;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 * {
@@ -38,26 +40,27 @@ body {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-.container{
-    position: fixed;
-    width: 320px;
-}
 
-input {
+
+input,button {
     border: none;
-    font-family: Century Gothic;
     font-size: 16px;
     line-height: 12px;
     padding: 0;
 }
 
-#login {
-  width: 320px;
+.container{
+    position: relative;
+    margin-top: 100px;
+    width: 450px;
+    height: auto;
+    border-radius: 5px;
+    background: red;
 }
 
 #login form {
-  padding: 30px 30px 30px 30px;
-  width: 320px;
+  padding: 30px 40px;
+  width: auto;
   border-radius: 5px;
   background: #3b4148;
   border-top: 3px solid #434a52;
@@ -67,10 +70,10 @@ input {
 #login form input[type="text"] {
   background-color: #3b4148;
   border-radius: 0px 3px 3px 0px;
-  border-bottom:  1px solid #a9a9a9;
+  border-bottom:  1px solid silver;
   color: white;
-  margin-bottom: 20px;
-  padding: 0 16px;
+  margin: 5px 0;
+  padding: 0 10px;
   width: 100%;
   height: 50px;
 }
@@ -78,27 +81,48 @@ input {
 #login form input[type="password"] {
   background-color: #3b4148;
   border-radius: 0px 3px 3px 0px;
-  border-bottom:  1px solid #a9a9a9;
+  border-bottom:  1px solid silver;
   color: white;
-  margin-bottom: 20px;
-  padding: 0 16px;
+  margin: 5px 0;
+  padding: 0 10px;
   width: 100%;
   height: 50px;
 }
 
-#login form input[type="submit"] {
+#login form button[type="submit"] {
   width: 100%;
   height: 40px;
   border-radius: 3px;
   cursor: pointer;
+    margin-top: 15px;
   background: #434a52;
   color: white ;
   border: 1px solid white;
 }
 
-#login form input[type="submit"]:hover {
+#login form button[type="submit"]:hover {
     background: white;
     border: 0px;
     color: #434a52;
     font-style: bold;
+}
+
+.login_form #userError,
+.login_form #passError{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 14px;
+    color: white;
+    background: rgba(255,0,0,0.1);
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: 1px solid #EF9A9A;
+    display: none;
+}
+
+*{
+    padding: 0;
+    margin: 0;
 }
