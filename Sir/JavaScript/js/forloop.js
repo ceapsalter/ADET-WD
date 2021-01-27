@@ -6,10 +6,10 @@ function controlConstructs() {
      age : 20
  };
 
-//    var x;
-//    for(x in person){
-//        window.alert(person[x]);
-//    }
+    var x;
+    for(x in person){
+        window.alert(person[x]);
+    }
 
     var agent = ["sage","yoru the cancer", "sky","jett","raze"];
     var x;
