@@ -11,10 +11,12 @@
     <form name="form">
 
         <div class="display">
-          <input type="text" id="display" name="displayResult" />
+            <input type="text" id="display" name="displayResult" />
         </div>
 
         <div class="buttons">
+
+            <input type="button" class="operator" id="clear" name="clear" value="C" onClick="display.value=''">
 
             <!-- Row 1 [7, 8 , 9 , +] -->
             <div class="row">
@@ -28,8 +30,8 @@
                 <!--9-->
                 <input type="button" name="nine" value="9" onClick="calcNumbers(nine.value)">
 
-                <input type="button" name="clear" value="C" onClick="display.value = ''">
-
+                <!--+-->
+                <input type="button" class="operator" name="add" value="+" onClick="calcNumbers(add.value)">
 
             </div>
 
@@ -45,9 +47,9 @@
                 <!--6-->
                 <input type="button" name="six" value="6" onClick="calcNumbers(six.value)">
 
-                <!--+-->
-                <input type="button" name="add" value="+" onClick="calcNumbers(add.value)">
 
+                <!----->
+                <input type="button" class="operator" name="subtract" value="-" onClick="calcNumbers(subtract.value)">
 
             </div>
 
@@ -63,8 +65,8 @@
                 <!--3-->
                 <input type="button" name="three" value="3" onClick="calcNumbers(three.value)">
 
-                <!----->
-                <input type="button" name="subtract" value="-" onClick="calcNumbers(subtract.value)">
+                <!--*-->
+                <input type="button" class="operator" name="multiply" value="*" onClick="calcNumbers(multiply.value)">
 
 
             </div>
@@ -72,25 +74,21 @@
             <!-- Row 4 [0, . , / , =] -->
             <div class="row">
 
-                <!--0-->
-                <input type="button" name="zero" value="0" onClick="calcNumbers(zero.value)">
-
                 <!--.-->
                 <input type="button" name="point" value="." onClick="calcNumbers(point.value)">
 
-                <!--/-->
-                <input type="button" name="divide" value="/" onClick="calcNumbers(divide.value)">
-
-
-
-
-            </div>
-
-            <div class="row">
+                <!--0-->
+                <input type="button" name="zero" value="0" onClick="calcNumbers(zero.value)">
 
                 <!--=-->
                 <input type="button" name="equal" class="red" value="=" onClick="displayResult.value=eval(displayResult.value)">
+
+                <!--/-->
+                <input type="button" class="operator" name="divide" value="/" onClick="calcNumbers(divide.value)">
+
             </div>
+
+
 
           </div>
 
