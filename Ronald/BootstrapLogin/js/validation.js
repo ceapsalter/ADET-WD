@@ -9,11 +9,15 @@ function validate() {
     if (user === validUser && pass === validPass) {
         window.alert ("Login Successfully");
 
-        window.location.replace("CVPage.html");
+        window.location.replace("Activity7.html");
         return false;
     }
 
     else {
         window.alert ("Incorrect Username/Password! Please Try Again ..");
     }
+}
+
+function logout(){
+    document.getElementById("logout-form").submit();
 }
