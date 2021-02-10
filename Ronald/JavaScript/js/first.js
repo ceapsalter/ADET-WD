@@ -1,20 +1,12 @@
-var firstName = "Ronald Vergel";
-var lastName = "Crisostomo";
-var helloWorld = "HelloWord";
-var money = 4;
-
+//global variable
+var name = "Psalter"
 function displayHelloWorld() {
-    window.alert(helloWorld);
-}
+            var money = 4
+            //local variable
+            var name = "Ronald"
+            var lastName = "Crisostomo"
 
-function displayfirstName() {
-    window.alert(firstName);
-}
+            // $ _ A-
 
-function displaylastName() {
-    window.alert(lastName);
-}
-
-function displayMoney() {
-    window.alert(money);
-}
+            window.alert(name)
+            }

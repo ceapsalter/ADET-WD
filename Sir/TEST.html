@@ -1,0 +1,238 @@
+<html>
+<head>
+    <script>
+        // Constructor
+        var Const = new RegExp('abc');
+
+        // literal
+        var lit = /abc/;
+
+        //variableToCompareTo.test(variable);
+
+        var firstRegEx = /Ron/;
+        var nickName = 'ron';
+        var result = firstRegEx.test(nickName);
+        console.log(" Result of comparing nickaname : "+ result);
+
+        //literal
+        //flags
+          // g and i
+
+          // i - case-insensitive
+          // /patternt/flags
+        var secondRegex = /Crisostomo phoenix/i;
+        var lname = 'crisostomo';
+        var result = secondRegex.test(lname);
+        console.log(" Result of comparing last name with i flag : "+ result);
+
+        // g - global
+
+        var addRegex = /lourdes/g;
+        var add = 'Sur Lourdes';
+        var result = addRegex.test(add);
+        console.log(" Result of comparing address with g flag : "+ result);
+
+        //Const
+
+        var agentRegEx = new RegExp('jett','i');
+
+        console.log(" sample regular expression construct : "+ agentRegEx.test('JETT'));
+
+        var agentRegEx = new RegExp('JETT','i');
+
+        console.log(" sample regular expression construct : "+ agentRegEx.test('JETT'));
+
+
+        //Character Groups
+            //[patternHere] = ex: [ver]
+            // any characters specified inside [] will return true
+            var fnameRegex = /[ver]gel/;
+            console.log('GROUPS with []');
+            console.log(fnameRegex.test('vgel'));
+            console.log(fnameRegex.test('egel'));
+            console.log(fnameRegex.test('rgel'));
+            console.log(fnameRegex.test('pgel'));
+
+            //[^pattern]
+            // exclude any character specified inside [] with preceeding ^
+            var fnameRegex = /[^ver]gel/;
+            console.log('GROUPS with [^]');
+            console.log(fnameRegex.test('vgel'));
+            console.log(fnameRegex.test('egel'));
+            console.log(fnameRegex.test('rgel'));
+            console.log(fnameRegex.test('pgel'));
+
+        //Ranges
+            //[a-z]
+            // any letter from lowercase a to z
+            var letterRegEx = /[a-z]/;
+            console.log('GROUPS with [a-z]');
+            console.log(letterRegEx.test('a'));
+            console.log(letterRegEx.test('s'));
+            console.log(letterRegEx.test('4'));
+
+            //[A-Z]
+            // any letter from uppercase A to Z
+            var letterRegEx = /[A-Za-z0-9]/;
+            console.log('GROUPS with [A-Z]');
+            console.log(letterRegEx.test('a'));
+            console.log(letterRegEx.test('s'));
+            console.log(letterRegEx.test('A'));
+            console.log(letterRegEx.test('4'));
+
+            var letterRegEx = /[a-g]test/;
+            console.log('GROUPS [a-g] with test');
+            console.log(letterRegEx.test('atest'));
+            console.log(letterRegEx.test('stest'));
+            console.log(letterRegEx.test('4test'));
+
+        //[0-9]
+            //any digit from 0 - 9
+            var numbersRegEx = /[0-9]/;
+            console.log('RANGE [0-9]');
+            console.log(numbersRegEx.test('1325'));
+            console.log(numbersRegEx.test('2'));
+            console.log(numbersRegEx.test('s'));
+
+        //Meta-Characters
+            // \d
+            // same with [0-9]
+                var numbersRegEx = /\d/;
+                console.log('Meta-Characters \d');
+                console.log(numbersRegEx.test('1325'));
+                console.log(numbersRegEx.test('2'));
+                console.log(numbersRegEx.test('s'));
+
+            // \w
+            // alphanumerical character
+                var alpanumbericRegEx = /\w/;
+                console.log('Meta-Characters \w');
+                console.log(alpanumbericRegEx.test('1325!'));
+                console.log(alpanumbericRegEx.test('2&-++-'));
+                console.log(alpanumbericRegEx.test('s_##'));
+
+            // \D
+            // same with [^0-9]
+                 var excludeDigit = /[^0-9]/;
+                console.log('Meta-Characters \D');
+                console.log(excludeDigit.test('1325'));
+                console.log(excludeDigit.test('asd'));
+                console.log(excludeDigit.test('sdf33'));
+
+            // \w
+            // same with [^a-z]
+                 var excludeDigit = /[^a-z]/;
+                console.log('Meta-Characters \W');
+                console.log(excludeDigit.test('1325'));
+                console.log(excludeDigit.test('asd'));
+                console.log(excludeDigit.test('sdf33'));
+
+        //Quantifier
+            // +
+            // preceeding expression 1 or more times.
+            // /\d+/
+                var digitRegEx = /\d+/;
+                console.log('Quantifier + with \d');
+                console.log(digitRegEx.test('1325'));
+                console.log(digitRegEx.test('sdf'));
+                console.log(digitRegEx.test('sdf3'));
+                console.log(digitRegEx.test(''));
+            //*
+            // preceeding expression 0 or more times.
+                var mulitpleCharacterRegEx = /crisost*omo/;
+                console.log('Quantifier *');
+                console.log(mulitpleCharacterRegEx.test('crisosomo'));
+                console.log(mulitpleCharacterRegEx.test('crisostttttttomo'));
+                console.log(mulitpleCharacterRegEx.test('crisostomo'));
+                console.log(mulitpleCharacterRegEx.test('crisostttttttttttttttttttttttttttttttttttttomo'));
+            //?
+            // preceeding expression 0 or 1, but pattern is optional
+                var oneOrMoreCharacterRegEx = /crisost?omo/;
+                console.log('Quantifier ?');
+                console.log(oneOrMoreCharacterRegEx.test('crisosomo'));
+                //true
+                console.log(oneOrMoreCharacterRegEx.test('crisostttttttomo'));
+                //false
+                console.log(oneOrMoreCharacterRegEx.test('crisostomo'));
+                //true
+                console.log(oneOrMoreCharacterRegEx.test('crisostttttttttttttttttttttttttttttttttttttomo'));
+                //false
+
+            //^
+            // check matches from the beginning of the string.
+                 var caretRegEx = /^v/;
+                console.log('Quantifier ^');
+                console.log(caretRegEx.test('vergel'));
+                console.log(caretRegEx.test('bad'));
+                console.log(caretRegEx.test('believe'));
+                console.log(caretRegEx.test('test'));
+            // check matches from the end of the string.
+                 var dollarRegEx = /o$/;
+                console.log('Quantifier $');
+                console.log(dollarRegEx.test('crisostomo'));
+                console.log(dollarRegEx.test('crisostoo'));
+                console.log(dollarRegEx.test('crisostom'));
+
+            //{number of occurences,}
+                var occurrencesRegEx = /ke{2,5}per/;
+                console.log('Quantifier {n}');
+                console.log(occurrencesRegEx.test('keper'));
+                console.log(occurrencesRegEx.test('keeeeeeper'));
+                console.log(occurrencesRegEx.test('keeeeper'));
+
+            //value | value
+            var eitherRegEx = /(jett|reyna) duelist/;
+                console.log('Alternation value | value');
+                console.log(eitherRegEx.test('jett duelist'));
+                console.log(eitherRegEx.test('phoeniex duelist'));
+                console.log(eitherRegEx.test('reyna duelist'));
+
+            var combineletters = /a\+b/;
+                console.log("Combining letters");
+                console.log(combineletters.test('a+b'));
+
+            //(groups) then specify the occurences
+            var groupdsRegEx = /(ron)ver\1/;
+            console.log("check mulitiple occurences from groups");
+            console.log(groupdsRegEx.test('ronverron'));
+            console.log(groupdsRegEx.test('ronron'));
+            console.log(groupdsRegEx.test('ronver'));
+            //x(?=y)
+            //
+            var groupdsRegEx = /Cris(?=ostomo)/;
+            console.log("check the succeeding value");
+            console.log(groupdsRegEx.test('Crisostomo'));
+            console.log(groupdsRegEx.test('Cristomo'));
+            console.log(groupdsRegEx.test('Cris'));
+
+
+            //pattern with 10 digit only
+            console.log("validate 10 digit number only")
+            var digitNumber = /^\d{10}$/;
+            console.log(digitNumber.test(65465465));
+
+            // +639357165827
+            console.log("check phone number");
+            var phonenumberRegex = /^(\+639|09)[0-9]{9}$/;
+
+            console.log(phonenumberRegex.test('+639357165827'));
+            console.log(phonenumberRegex.test('639357165827'));
+            console.log(phonenumberRegex.test('+63935716582654657'));
+            console.log(phonenumberRegex.test('09357165827'));
+
+        function validate(){
+
+            var getInput = document.getElementById('input').value;
+            console.log(getInput);
+            var usernameRegEx = /^([a-z]{3})[0-9]{2}$/;
+            console.log(usernameRegEx.test(getInput));
+        }
+    </script>
+    </head>
+
+    <body>
+
+        <input type="text" id="input">
+        <input type="button" value="Submit" onclick="validate()">
+    </body>
+</html>

@@ -1,10 +1,12 @@
 <html>
     <head>
-        <script type="text/javascript" src="js/jquery-3.5.1.slim.js"></script>
-        <script type="text/javascript" src="js/popper.min.js"></script>
-        <script type="text/javascript" src="bootstrap-4.3.1/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
-        <link href="bootstrap-4.3.1/bootstrap-4.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-          <style>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <script type="text/javascript" src="JavaScript/js/jquery-3.5.1.slim.js"></script>
+            <script type="text/javascript" src="JavaScript/js/popper.min.js"></script>
+            <script type="text/javascript" src="bootstrap-4.3.1/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+            <link href="bootstrap-4.3.1/bootstrap-4.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <style>
               .bd-placeholder-img {
                 font-size: 1.125rem;
                 text-anchor: middle;
@@ -23,22 +25,19 @@
     </head>
   <body class="text-center">
 
-        <main class="form-signin">
-          <form>
-        <!--    <img class="mb-4" src="" alt="" width="72" height="57">-->
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-            <label for="inputEmail" class="visually-hidden">Email address</label>
-            <input type="text" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
-            <label for="inputPassword" class="visually-hidden">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-            <div class="checkbox mb-3">
-              <label>
-                <input type="checkbox" value="remember-me"> Remember me
-              </label>
-            </div>
-            <button class="w-50 btn btn-small btn-primary" type="submit">Sign in</button>
-            <p class="mt-5 mb-3 text-muted">&copy; 2017-2020</p>
-          </form>
-        </main>
+<form>
+    <div class="form-group">
+        <label for="inputEmail">Email</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+    </div>
+    <div class="form-group">
+        <label for="inputPassword">Password</label>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <label class="form-check-label"><input type="checkbox"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+</form>
     </body>
 </html>
