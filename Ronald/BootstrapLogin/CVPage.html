@@ -1,0 +1,223 @@
+<html>
+
+<head>
+    <link href="../bootstrap-4.3.1/bootstrap-4.3.1/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link href="css/style2.css" rel="stylesheet">
+    <title>CURRICULUM VITAE</title>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $("#sidebar").mCustomScrollbar({
+            theme: "minimal"
+        });
+
+        $('#dismiss, .overlay').on('click', function () {
+            // hide sidebar
+            $('#sidebar').removeClass('active');
+            // hide overlay
+            $('.overlay').removeClass('active');
+        });
+
+        $('#sidebarCollapse').on('click', function () {
+            // open sidebar
+            $('#sidebar').addClass('active');
+            // fade in the overlay
+            $('.overlay').addClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+</script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+
+            <div id="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <div class="sidebar-header">
+                <h3>Bootstrap Sidebar</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Dummy Heading</p>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+
+                    <div class="t-b container text-center">
+                        <div class="curriculum valorantFont">
+                            CURRICULUM
+                        </div>
+                        <div class="vitae valorantFont">
+                            VITAE
+                        </div>
+                    </div>
+
+                    <div class="container img-thumbnail p-4 mb-5">
+                        <div class="panel-body">
+                            <article class="panel-body">
+                                <figure class="text-center">
+                                    <img src="img/Me.jpg" class="img-thumbnail my-5" alt="me">
+                                    <figcaption>
+                                        <h3>Ronald Vergel Crisostomo Dela Cruz</h3>
+                                        A-11 MRL Building, Mc.Arthur Highway, Brgy. Mabiga, Mabalacat City, Pampanga, 2010
+                                        <br>
+                                        <strong>Contact No.:</strong> 0928-538-1219
+                                        <br>
+                                        <strong>E-mail:</strong> DelaCruz.RonaldVergel@gmail.com
+                                    </figcaption>
+                                </figure>
+                            </article>
+
+                            <br>
+
+                            <article>
+                                <hr>
+                                <h4>
+                                    <center>
+                                        <strong>PERSONAL DETAILS</strong>
+                                    </center>
+                                </h4>
+                                <hr>
+                                <dl class="dl-horizontal text-center">
+                                    <dt>Date of Birth:</dt>
+                                    <dd>September 08, 2000</dd>
+                                    <dt>Age:</dt>
+                                    <dd>20</dd>
+                                    <dt>Gender:</dt>
+                                    <dd>Male</dd>
+                                    <dt>Marital Status:</dt>
+                                    <dd>Single</dd>
+                                    <dt>Citizenship:</dt>
+                                    <dd>Filipino</dd>
+                                    <dt>Height:</dt>
+                                    <dd>5'5"</dd>
+                                    <dt>Weight:</dt>
+                                    <dd>60 kg</dd>
+                                </dl>
+                            </article>
+
+                            <article>
+                                <hr>
+                                <h4>
+                                    <center>
+                                        <strong>EDUCATION</strong>
+                                    </center>
+                                </h4>
+                                <hr>
+                                <dl class="dl-horizontal text-center">
+                                    <dt>2019-Present</dt>
+                                    <dd><b>College</b> (Bachelor of Science in Information Technology) | Republic Central Colleges</dd>
+
+                                    <dt>2017-2019</dt>
+                                    <dd><b>Senior High School</b> (ComProg) | Clark College of Science and Technology</dd>
+
+                                    <dt>2013-2017</dt>
+                                    <dd><b>Junior High School</b> | Rafael L. Lazation Memorial High School</dd>
+
+                                    <dt>2007-2013</dt>
+                                    <dd><b>Elementary</b> | Alberto G. Pabalan Elementary School</dd>
+
+                                </dl>
+                            </article>
+
+                            <article>
+                                <hr>
+                                <h4>
+                                    <center>
+                                        <strong>ACHIEVEMENTS</strong>
+                                    </center>
+                                </h4>
+                                <hr>
+                                <dl class="dl-horizontal">
+                                    <ul>
+                                        <li>President Lister Category A (College) | Republic Central Colleges </li>
+                                        <li>President Lister Category B (College) | Republic Central Colleges</li>
+                                        <li>Valedictorian (Senior High School) | Clark College of Science and Technology</li>
+                                        <li>Prorammer of the year (Senior High School) | Clark College of Science and Technology</li>
+                                        <li>Leadership Awardee (Senior High School) | Clark College of Science and Technology</li>
+                                        <li>2nd Semester With High Honor (Grade 12-Senior High School) | Clark College of Science and Technology</li>
+                                        <li>1st Semester With High Honor (Grade 12-Senior High School) | Clark College of Science and Technology</li>
+                                        <li>2nd Semester With High Honor (Grade 11-Senior High School) | Clark College of Science and Technology</li>
+                                        <li>1st Semester With Honor (Grade 11-Senior High School) | Clark College of Science and Technology</li>
+                                        <li>Best in Mathematics (Junior High School) | Rafael L. Lazatin Memorial High School</li>
+                                        <li>Graduated With High Honor (Junior High School) | Rafael L. Lazatin Memorial High School</li>
+                                        <li>Valedictorian (Elementary) | Alberto G. Pabalan Elementary School</li>
+                                    </ul>
+                                </dl>
+                            </article>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Dark Overlay element -->
+        <div class="overlay"></div>
+    </div>
+
+
+    <footer class="bg-dark text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            <a class="text-light" href="https://www.facebook.com/ronaldvergel.crisostomoii/">Ronald Vergel Dela Cruz</a>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../JavaScript/js/jquery-3.5.1.slim.js"></script>
+    <script type="text/javascript" src="../JavaScript/js/popper.min.js"></script>
+    <script type="text/javascript" src="../bootstrap-4.3.1/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/validation.js"></script>
+</body>
+
+</html>
