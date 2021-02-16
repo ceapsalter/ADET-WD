@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <link href="../bootstrap-4.3.1/bootstrap-4.3.1/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/style2.css" rel="stylesheet">
+    <title>COMPUTE GRADES</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h4 class="info mt-3">Ronald Vergel C. Dela Cruz</h4>
+        <h5 class="info">BSIT-2</h5>
+        <div class="grade-form">
+            <div class="form-group">
+                <label class="font-weight-bold">Prelim Grade</label>
+                <input type="text" id="prelim" class="form-control" placeholder="Enter Prelim Grade" required="required" autofocus>
+                <span id="prelimError" class="text-danger font-weight-bold"> </span>
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold">Midterm Grade</label>
+                <input type="text" id="midterm" class="form-control" placeholder="Enter Midterm Grade" required="required">
+                <span id="midtermError" class="text-danger font-weight-bold"> </span>
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold">Pre-Final Grade</label>
+                <input type="text" id="prefinal" class="form-control" placeholder="Enter Pre-Final Grade" required="required">
+                <span id="prefinalError" class="text-danger font-weight-bold"> </span>
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold">Final Grade</label>
+                <input type="text" id="final" class="form-control" placeholder="Enter Final Grade" required="required">
+                <span id="finalError" class="text-danger font-weight-bold"> </span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="numeric" class="form-control" placeholder="Numeric Equivalent : " disabled>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="description" class="form-control" placeholder="Verbal Description : " disabled>
+            </div>
+
+            <div class="form-group text-center">
+                <button class="btn-dark btn mt-4" onclick="computeGrade()">
+                    Compute Grade
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="../JavaScript/js/jquery-3.5.1.slim.js"></script>
+    <script type="text/javascript" src="../JavaScript/js/popper.min.js"></script>
+    <script type="text/javascript" src="../bootstrap-4.3.1/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/compute.js"></script>
+</body>
+
+</html>

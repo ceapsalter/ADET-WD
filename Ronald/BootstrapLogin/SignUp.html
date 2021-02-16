@@ -1,57 +1,78 @@
 <html>
-    <head>
-        <link href="../bootstrap-4.3.1/bootstrap-4.3.1/dist/css/bootstrap.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-        <link href="css/style4.css" rel="stylesheet">
-        <title>VALORANT</title>
-    </head>
-    <body>
 
-        <div class="container">
-            <div class="signup-form">
-                <form class="signup_form" name="form" onsubmit="return validate()">
+<head>
+    <link href="../bootstrap-4.3.1/bootstrap-4.3.1/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link href="css/style4.css" rel="stylesheet">
+    <title>VALORANT</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="signup-form">
+            <form class="signup_form" name="form" onsubmit="return validate()">
+                <center>
+                    <img class="icon mb-4" src="img/Valorant.png" alt="Avatar">
+                </center>
+                <h2 class="valoFOnt text-center mb-4">SIGN UP</h2>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="inputFirstName">First Name</label>
+                            <input type="text" id="inputFirstName" class="form-control" placeholder="First Name" required="required" autofocus>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="inputLastName">Last Name</label>
+                            <input type="text" id="inputLastName" class="form-control" placeholder="Last Name" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="required">
+                </div>
+                <div class="form-group">
+                    <label for="inputUser">Username</label>
+                    <input type="text" id="inputUser" class="form-control" placeholder="Username" required="required">
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Address</label>
+                    <textarea type="text" id="inputAddress" class="form-control" placeholder="Address" required="required"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="inputPass">Password</label>
+                    <input type="password" id="inputPass" class="form-control" placeholder="Password" required="required">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPass">Confirm Password</label>
+                    <input type="password" id="confirmPass" class="form-control" placeholder="Confirm Password" required="required">
+                </div>
+                <div class="form-group">
                     <center>
-                        <img class="icon mb-4" src="img/Valorant.png" alt="Avatar">
+                        <button type="submit" class="btn-danger btn-circle btn-xl" onclick="validateSignup()">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
                     </center>
-                    <h2 class="text-center mb-4">SIGN UP</h2>
-                    <div class="form-group">
-                        <input type="text" id="user" class="form-control" placeholder="Email" required="required" autofocus>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="user" class="form-control" placeholder="Username" required="required" autofocus>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="user" class="form-control" placeholder="First Name" required="required" autofocus>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="user" class="form-control" placeholder="Last Name" required="required" autofocus>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" id="pass" class="form-control" placeholder="Password" required="required">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" id="pass" class="form-control" placeholder="Confirm Password" required="required">
-                    </div>
-                    <div class="form-group">
-                        <center>
-                            <button type="submit" class="btn-danger btn-circle btn-xl">
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                            </button>
-                        </center>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn-danger btn-block btn-xl" onclick="location.href='index.html';">
-                                Sign In
-                            </button>
-                    </div>
-                </form>
-            </div>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <h6 class="text-center">Already have an account ?</h6>
+                    <button type="submit" class="btn-danger btn-block pb-1" onclick="location.href='index.html';">
+                        Sign In
+                    </button>
+                </div>
+            </form>
         </div>
+    </div>
+    <script type="text/javascript" src="js/validation.js"></script>
+    <script type="text/javascript" src="../JavaScript/js/jquery-3.5.1.slim.js"></script>
+    <script type="text/javascript" src="../JavaScript/js/popper.min.js"></script>
+    <script type="text/javascript" src="../bootstrap-4.3.1/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+</body>
 
-        <script type="text/javascript" src="../JavaScript/js/jquery-3.5.1.slim.js"></script>
-        <script type="text/javascript" src="../JavaScript/js/popper.min.js"></script>
-        <script type="text/javascript" src="../bootstrap-4.3.1/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/validation.js"></script>
-    </body>
 </html>
