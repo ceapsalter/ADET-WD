@@ -1,6 +1,14 @@
 <html>
 <head>
     <script>
+
+        var testNonCapturingGroup= /^[a-zA-Z]*(?:\d[a-zA-Z]*){0,2}$/;
+
+        var test = 'asdfsdfasdfsadfs';
+        var result = testNonCapturingGroup.test(test);
+        console.log(result);
+
+
         // Constructor
         var Const = new RegExp('abc');
 
