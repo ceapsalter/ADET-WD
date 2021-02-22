@@ -29,7 +29,7 @@ function validateSignup() {
     var passwordRegEx = /^(?=(?:[!@#$%^&+=]*[A-Za-z0-9]){7,10})(?=(?:[A-Za-z0-9]*[!@#$%^&+=]){1}).{8,11}$/;
 
 
-    if (firtNameRegEx.test(Firstname)) {
+    if (firstNameRegEx.test(Firstname)) {
         if (lastNameRegEx.test(Lastname)) {
             if (usernameRegEx.test(Username)) {
                 if (addressRegEx.test(Address)) {
@@ -39,6 +39,7 @@ function validateSignup() {
                         }
                         else{
                             window.alert("Registered Successfully");
+                            Firstname.focus();
                         }
                     }
                 }
