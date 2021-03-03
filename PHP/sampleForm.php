@@ -16,7 +16,7 @@
 
   <body>
   <h1>TinyMCE Quick Start Guide</h1>
-    <form method="post">
+    <form method="post" action="<?php $_PHP_SELF ?>">
       <textarea id="mytextarea">Hello, World!</textarea>
     </form>
   </body>
