@@ -12,7 +12,7 @@
 
     <div class="container">
         <div class="signup-form">
-            <form class="signup_form" name="form" onsubmit="return validate()">
+            <form class="signup_form" name="form" onsubmit="return validateSignup()">
                 <center>
                     <img class="icon mb-4" src="img/Valorant.png" alt="Avatar">
                 </center>
@@ -22,13 +22,13 @@
                     <div class="col-6">
                         <div class="form-group">
                             <label for="inputFirstName">First Name</label>
-                            <input type="text" id="inputFirstName" class="form-control" placeholder="First Name" required="required" autofocus>
+                            <input pattern="^[A-Z][a-z]+(?:[-'\s][A-Z][a-z]+)*$" type="text" id="inputFirstName" class="form-control" placeholder="First Name" required="required" autofocus>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="form-group">
                             <label for="inputLastName">Last Name</label>
-                            <input type="text" id="inputLastName" class="form-control" placeholder="Last Name" required="required">
+                            <input pattern="^[A-Z][a-z]+(?:[-'\s][A-Z][a-z]+)*$" type="text" id="inputLastName" class="form-control" placeholder="Last Name" required="required">
                         </div>
                     </div>
                 </div>
@@ -38,23 +38,23 @@
                 </div>
                 <div class="form-group">
                     <label for="inputUser">Username</label>
-                    <input type="text" id="inputUser" class="form-control" placeholder="Username" required="required">
+                    <input pattern="^(?=(?:\d*[A-Za-z]){6})(?=(?:[A-Za-z]*\d){2})[A-Za-z0-9]{6,8}$" type="text" id="inputUser" class="form-control" placeholder="Username" required="required">
                 </div>
                 <div class="form-group">
                     <label for="inputAddress">Address</label>
-                    <textarea type="text" id="inputAddress" class="form-control" placeholder="Address" required="required"></textarea>
+                    <textarea pattern="^([A-Z0-9]+[\s-]*[A-Z0-9]*)([A-Za-z,.\s]*)$" type="text" id="inputAddress" class="form-control" placeholder="Address" required="required"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="inputPass">Password</label>
-                    <input type="password" id="inputPass" class="form-control" placeholder="Password" required="required">
+                    <input pattern="^(?=(?:[!@#$%^&+=]*[A-Za-z0-9]){7,10})(?=(?:[A-Za-z0-9]*[!@#$%^&+=]){1}).{8,11}$" type="password" id="inputPass" class="form-control" placeholder="Password" required="required">
                 </div>
                 <div class="form-group">
                     <label for="confirmPass">Confirm Password</label>
-                    <input type="password" id="confirmPass" class="form-control" placeholder="Confirm Password" required="required">
+                    <input pattern="^(?=(?:[!@#$%^&+=]*[A-Za-z0-9]){7,10})(?=(?:[A-Za-z0-9]*[!@#$%^&+=]){1}).{8,11}$" type="password" id="confirmPass" class="form-control" placeholder="Confirm Password" required="required">
                 </div>
                 <div class="form-group">
                     <center>
-                        <button type="submit" class="btn-danger btn-circle btn-xl" onclick="validateSignup()">
+                        <button type="submit" class="btn-danger btn-circle btn-xl">
                             <i class="fa fa-arrow-right" aria-hidden="true"></i>
                         </button>
                     </center>
@@ -69,10 +69,10 @@
             </form>
         </div>
     </div>
-    <script type="text/javascript" src="js/validation.js"></script>
     <script type="text/javascript" src="../JavaScript/js/jquery-3.5.1.slim.js"></script>
     <script type="text/javascript" src="../JavaScript/js/popper.min.js"></script>
     <script type="text/javascript" src="../bootstrap-4.3.1/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/validation.js"></script>>
 </body>
 
 </html>
