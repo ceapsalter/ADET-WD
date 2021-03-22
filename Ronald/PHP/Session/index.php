@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <link href="../bootstrap-4.3.1/bootstrap-4.3.1/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../../bootstrap-4.3.1/bootstrap-4.3.1/dist/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link href="css/style.css" rel="stylesheet">
@@ -12,29 +12,21 @@
 
     <div class="container">
         <div class="login-form">
-            <form class="login_form" name="form" onsubmit="return validate()">
+            <form class="login_form" name="form" action="welcome.php" method="post">
                 <center>
                     <img class="icon mb-4" src="img/Valorant.png" alt="Avatar">
                 </center>
                 <h2 class="valoFont text-center mb-4">SIGN IN</h2>
                 <div class="form-group">
-                    <input type="text" id="user" class="form-control" placeholder="Username" required="required" autofocus>
+                    <input type="text" name="username" id="username" class="form-control" placeholder="Username" required="required" autofocus>
                 </div>
                 <div class="form-group">
-                    <input type="password" id="pass" class="form-control" placeholder="Password" required="required">
+                    <input name="password" type="password" id="password" class="form-control" placeholder="Password" required="required">
                 </div>
                 <div class="form-group">
                     <center>
                         <button type="submit" class="btn-danger btn-circle btn-xl">
                             <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </button>
-                    </center>
-                </div>
-                <hr>
-                <div class="form-group">
-                    <center>
-                        <button type="submit" class="btn-danger btn-block pb-1" onclick="location.href='SignUp.html';">
-                            Sign up New Account
                         </button>
                     </center>
                 </div>
