@@ -1,0 +1,64 @@
+@font-face {
+    font-family:"VALORANT";
+    src:
+    url("Valorant_Font.eot?") format("eot"),
+    url("Valorant_Font.woff") format("woff"),
+    url("Valorant_Font.ttf") format("truetype"),
+    url("Valorant_Font.svg#VALORANT-Regular") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+body{
+    height: 100%;
+    background-image: url(../img/Valorant%20Background.JPG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    font-family: Century Gothic;
+}
+
+.container{
+    background: rgba(0,0,0,0.3);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+hr{
+    background-color: whitesmoke;
+}
+
+
+.t-b container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.curriculum {
+  color: #FB4264;
+  text-shadow: 0 0 30px #F40A35;
+}
+
+.valorantFont{
+    font-family: VALORANT;
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 700;
+}
+
+.vitae {
+  color: #426DFB;
+  text-shadow: 0 0 30px #2356FF;
+}
+

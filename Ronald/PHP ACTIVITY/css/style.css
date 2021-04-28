@@ -1,0 +1,73 @@
+@font-face {
+    font-family:"VALORANT";
+    src:
+    url("Valorant_Font.eot?") format("eot"),
+    url("Valorant_Font.woff") format("woff"),
+    url("Valorant_Font.ttf") format("truetype"),
+    url("Valorant_Font.svg#VALORANT-Regular") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+body{
+    height: 100%;
+    background-image: url(../img/Omen.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.valoFont{
+    font-family: VALORANT;
+}
+
+.login-form {
+    width: auto;
+    max-width: 340px;
+    min-width: auto;
+    margin: 50px auto;
+}
+
+.login-form form {
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    box-shadow: 0px 0px 5px 5px black;
+    padding: 30px;
+}
+
+.login-form h2 {
+    margin: 0 0 15px;
+}
+
+.form-control, .btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon{
+    width: 60px;
+    height: 60px;
+}
+
+.btn-circle {
+   width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+.error_mess{
+    font-size: 11px; 
+    color:#cc0000 !important; 
+    margin-bottom:10px;
+}
